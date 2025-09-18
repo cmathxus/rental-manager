@@ -12,8 +12,8 @@ using tdlimoveis.Data;
 namespace tdlimoveis.Migrations
 {
     [DbContext(typeof(TdlContext))]
-    [Migration("20250913044324_DatabaseTdl")]
-    partial class DatabaseTdl
+    [Migration("20250914190208_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using System.Text.Json.Serialization;
 
 namespace tdlimoveis.Models
 {
@@ -12,7 +13,8 @@ namespace tdlimoveis.Models
     public bool Status { get; set; }
 
     public int OwnerId { get; set; }
-    public Owner Owner { get; set; }
+    [JsonIgnore]
+    public Owner? Owner { get; set; }
 
     public List<Contract> Contracts { get; set; } = new();
   }

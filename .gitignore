@@ -16,6 +16,7 @@ obj/
 appsettings.json
 appsettings.Development.json
 secrets.json
+Controllersold
 
 # Pacotes NuGet
 *.nupkg
