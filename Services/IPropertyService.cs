@@ -1,10 +1,11 @@
+using tdlimoveis.Dtos;
 using tdlimoveis.Models;
 
 namespace tdlimoveis.Services
 {
   public interface IPropertyService
   {
-    Task<ServiceResult<Property>> CreatePropertyAsync(int id, Property property);
-    Task<ServiceResult<List<Property>>> GetPropertiesByOwnerIdAsync(int? id);
+    Task<ServiceResult<PropertyReadDto>> CreatePropertyAsync(int id, PropertyCreateDto property);
+    Task<ServiceResult<List<PropertyReadDto>>> GetPropertiesByOwnerIdAsync(int id);
   }
 }

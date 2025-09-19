@@ -2,7 +2,6 @@ using System;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using tdlimoveis.Services;
-using tdlimoveis.Models;
 using tdlimoveis.Dtos;
 
 namespace tdlimoveis.Controllers

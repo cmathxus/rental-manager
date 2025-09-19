@@ -1,5 +1,6 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
+using tdlimoveis.Dtos;
 using tdlimoveis.Models;
 using tdlimoveis.Services;
 
@@ -18,7 +19,7 @@ namespace tdlimoveis.Controllers
     }
 
     [HttpPost("/owners/{ownerId}/properties")]
-    public async Task<IActionResult> CreateProperty(int ownerId, [FromBody] Property property)
+    public async Task<IActionResult> CreateProperty(int ownerId, [FromBody] PropertyCreateDto property)
     {
       var result = await _propertyService.CreatePropertyAsync(ownerId, property);
 
