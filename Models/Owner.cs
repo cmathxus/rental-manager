@@ -4,7 +4,6 @@ namespace tdlimoveis.Models
   {
     public int Id { get; set; }
     public string BankAccount { get; set; }
-
     public List<Property> Properties { get; set; } = new();
   }
 }

@@ -33,11 +33,11 @@ namespace tdlimoveis.Services
       }
     }
 
-    public async Task<ServiceResult<List<Property>>> GetPropertiesByOwnerIdAsync(int id)
+    public async Task<ServiceResult<List<Property>>> GetPropertiesByOwnerIdAsync(int? id)
     {
       try
       {
-        if (id == null)
+        if (!id.HasValue)
           return ServiceResult<List<Property>>.Fail("O id do proprietário não pode ser nulo!");
 
         var properties = await _propertyRepository.GetPropertyByOwnerIdAsync(id);

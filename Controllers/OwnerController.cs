@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using tdlimoveis.Services;
 using tdlimoveis.Models;
+using tdlimoveis.Dtos;
 
 namespace tdlimoveis.Controllers
 {
@@ -17,8 +18,8 @@ namespace tdlimoveis.Controllers
       _ownerService = ownerService;
     }
 
-    [HttpPost("create")]
-    public async Task<IActionResult> CreateOwner([FromBody] Owner owner)
+    [HttpPost("/owners")]
+    public async Task<IActionResult> CreateOwner([FromBody] OwnerCreateDto owner)
     {
       var result = await _ownerService.AddAsync(owner);
 
@@ -28,7 +29,7 @@ namespace tdlimoveis.Controllers
       return Ok(result.Data);
     }
 
-    [HttpGet("read")]
+    [HttpGet("/owners")]
     public async Task<IActionResult> ReadOwners()
     {
       var result = await _ownerService.GetAllAsync();
@@ -39,10 +40,22 @@ namespace tdlimoveis.Controllers
       return Ok(result.Data);
     }
 
-    [HttpPut("update/{id}")]
-    public async Task<IActionResult> UpdateOwner(int id, [FromBody] Owner updatedOwner)
+    [HttpPut("/owners/{id}")]
+    public async Task<IActionResult> UpdateOwner(int id, [FromBody] OwnerCreateDto updatedOwner)
     {
       var result = await _ownerService.UpdateAsync(id, updatedOwner);
+
+      if (!result.Result)
+        return BadRequest(result.Message);
+
+      return Ok(result.Data);
+    }
+
+
+    [HttpDelete("/owners/{id}")]
+    public async Task<IActionResult> RemoveOwner(int id)
+    {
+      var result = await _ownerService.RemoveAsync(id);
 
       if (!result.Result)
         return BadRequest(result.Message);

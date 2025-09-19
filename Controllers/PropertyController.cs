@@ -17,7 +17,7 @@ namespace tdlimoveis.Controllers
       _propertyService = propertyService;
     }
 
-    [HttpPost("{ownerId}/properties")]
+    [HttpPost("/owners/{ownerId}/properties")]
     public async Task<IActionResult> CreateProperty(int ownerId, [FromBody] Property property)
     {
       var result = await _propertyService.CreatePropertyAsync(ownerId, property);
@@ -28,7 +28,7 @@ namespace tdlimoveis.Controllers
       return Ok(result.Data);
     }
 
-    [HttpGet("{ownerId}/properties")]
+    [HttpGet("/owners/{ownerId}/properties")]
     public async Task<IActionResult> ListProperties(int ownerId)
     {
       var result = await _propertyService.GetPropertiesByOwnerIdAsync(ownerId);

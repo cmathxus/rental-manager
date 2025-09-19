@@ -1,6 +1,7 @@
 using System.Data.Common;
 using Microsoft.EntityFrameworkCore;
 using tdlimoveis.Data;
+using tdlimoveis.Dtos;
 using tdlimoveis.Models;
 
 namespace tdlimoveis.Repository
@@ -26,7 +27,7 @@ namespace tdlimoveis.Repository
       .ToListAsync();
     }
 
-    public async Task UpdateAsync(int id, Owner owner)
+    public async Task UpdateAsync(Owner owner)
     {
       _context.Owners.Add(owner);
       await _context.SaveChangesAsync();

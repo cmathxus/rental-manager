@@ -19,7 +19,7 @@ namespace tdlimoveis.Repository
       await _context.SaveChangesAsync();
     }
 
-    public async Task<List<Property>> GetPropertyByOwnerIdAsync(int id)
+    public async Task<List<Property>> GetPropertyByOwnerIdAsync(int? id)
     {
       return await _context.Properties
       .Include(p => p.Owner)

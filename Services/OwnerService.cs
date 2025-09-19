@@ -3,90 +3,110 @@ using tdlimoveis.Models;
 using tdlimoveis.Repository;
 using System.Data.Common;
 using Microsoft.AspNetCore.Http.HttpResults;
+using tdlimoveis.Dtos;
+using AutoMapper;
 
 namespace tdlimoveis.Services
 {
   public class OwnerService : IOwnerService
   {
     private readonly IOwnerRepository _repository;
+    private readonly IMapper _mapper;
 
-    public OwnerService(IOwnerRepository repository)
+    public OwnerService(IOwnerRepository repository, IMapper mapper)
     {
       _repository = repository;
+      _mapper = mapper;
     }
 
-    public async Task<ServiceResult<Owner>> AddAsync(Owner owner)
+    public async Task<ServiceResult<OwnerReadDto>> AddAsync(OwnerCreateDto ownerDto)
     {
-      if (string.IsNullOrWhiteSpace(owner.Name))
-        return ServiceResult<Owner>.Fail("Nome é obrigatório");
+      if (string.IsNullOrWhiteSpace(ownerDto.Name))
+        return ServiceResult<OwnerReadDto>.Fail("Nome é obrigatório");
+
+      var owner = _mapper.Map<Owner>(ownerDto);
 
       await _repository.AddAsync(owner);
 
-      return ServiceResult<Owner>.Success(owner);
+      var ownerReadDto = _mapper.Map<OwnerReadDto>(owner);
+      return ServiceResult<OwnerReadDto>.Success(ownerReadDto);
     }
 
-    public async Task<ServiceResult<List<Owner>>> GetAllAsync()
+    public async Task<ServiceResult<List<OwnerReadDto>>> GetAllAsync()
     {
       try
       {
         var owners = await _repository.GetAllAsync();
 
-        return ServiceResult<List<Owner>>.Success(owners);
+        var ownerDtos = _mapper.Map<List<OwnerReadDto>>(owners);
+
+        return ServiceResult<List<OwnerReadDto>>.Success(ownerDtos);
       }
       catch (Exception ex)
       {
-        return ServiceResult<List<Owner>>.Fail($"Erro ao buscar proprietários: {ex.Message}");
+        return ServiceResult<List<OwnerReadDto>>.Fail($"Erro ao buscar proprietários: {ex.Message}");
       }
     }
 
-    public async Task<ServiceResult<Owner>> UpdateAsync(int id, Owner updatedOwner)
+    public async Task<ServiceResult<OwnerReadDto>> UpdateAsync(int id, OwnerCreateDto updatedOwnerDto)
     {
-      if (id <= 0 || updatedOwner.Name == null)
-        return ServiceResult<Owner>.Fail($"Id ou nome não podem ser nulos!");
+      if (id <= 0 || updatedOwnerDto.Name == null)
+        return ServiceResult<OwnerReadDto>.Fail($"Id ou nome não podem ser nulos!");
 
       Owner owner = await _repository.GetOwnerByIdAsync(id);
+      if (owner == null)
+        return ServiceResult<OwnerReadDto>.Fail("Proprietário não encontrado.");
 
-      owner.Name = updatedOwner.Name;
-      owner.Email = updatedOwner.Email;
-      owner.DocumentNumber = updatedOwner.DocumentNumber;
-      owner.Phone = updatedOwner.Phone;
-      owner.BankAccount = updatedOwner.BankAccount;
+      _mapper.Map(updatedOwnerDto, owner);
 
-      await _repository.UpdateAsync(id, updatedOwner);
+      await _repository.UpdateAsync(owner);
 
-      return ServiceResult<Owner>.Success(owner);
+      var ownerReadDto = _mapper.Map<OwnerReadDto>(owner);
+
+      return ServiceResult<OwnerReadDto>.Success(ownerReadDto);
     }
 
-    public async Task<ServiceResult<Owner>> GetOwnerByIdAsync(int id)
+    public async Task<ServiceResult<OwnerReadDto>> GetOwnerByIdAsync(int id)
     {
       try
       {
         Owner owner = await _repository.GetOwnerByIdAsync(id);
 
-        return ServiceResult<Owner>.Success(owner);
+        if (owner == null)
+          return ServiceResult<OwnerReadDto>.Fail("Proprietário não encontrado.");
+
+        var ownerReadDto = _mapper.Map<OwnerReadDto>(owner);
+
+        return ServiceResult<OwnerReadDto>.Success(ownerReadDto);
       }
       catch (Exception ex)
       {
-        return ServiceResult<Owner>.Fail($"Erro ao buscar proprietários: {ex.Message}");
+        return ServiceResult<OwnerReadDto>.Fail($"Erro ao buscar proprietários: {ex.Message}");
       }
     }
 
-    public async Task<ServiceResult<Owner>> RemoveAsync(int id)
+    public async Task<ServiceResult<OwnerReadDto>> RemoveAsync(int id)
     {
       try
       {
-        if (id == null)
-          return ServiceResult<Owner>.Fail($"Id ou nome não podem ser nulos!");
+        if (id <= 0)
+          return ServiceResult<OwnerReadDto>.Fail($"Id inválido!");
 
         var owner = await _repository.GetOwnerByIdAsync(id);
 
+        if (owner == null)
+          return ServiceResult<OwnerReadDto>.Fail("Proprietário não encontrado.");
+
+
         await _repository.RemoveAsync(owner);
 
-        return ServiceResult<Owner>.Success(owner);
+        var ownerReadDto = _mapper.Map<OwnerReadDto>(owner);
+
+        return ServiceResult<OwnerReadDto>.Success(ownerReadDto);
       }
       catch (Exception ex)
       {
-        return ServiceResult<Owner>.Fail($"Erro ao remover proprietário: {ex.Message}");
+        return ServiceResult<OwnerReadDto>.Fail($"Erro ao remover proprietário: {ex.Message}");
       }
     }
   }
