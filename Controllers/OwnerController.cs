@@ -8,7 +8,7 @@ namespace tdlimoveis.Controllers
 {
   [ApiController]
   [Route("[controller]")]
-  public class OwnerController : Controller
+  public class OwnerController : ControllerBase
   {
     private readonly IOwnerService _ownerService;
 
@@ -31,7 +31,7 @@ namespace tdlimoveis.Controllers
     [HttpGet("read")]
     public async Task<IActionResult> ReadOwners()
     {
-      var result = await _ownerService.ReadAsync();
+      var result = await _ownerService.GetAllAsync();
 
       if (!result.Result)
         return BadRequest(result.Message);
@@ -43,7 +43,7 @@ namespace tdlimoveis.Controllers
     public async Task<IActionResult> UpdateOwner(int id, [FromBody] Owner updatedOwner)
     {
       var result = await _ownerService.UpdateAsync(id, updatedOwner);
-      
+
       if (!result.Result)
         return BadRequest(result.Message);
 

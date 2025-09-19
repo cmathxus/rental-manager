@@ -1,0 +1,42 @@
+using System;
+using Microsoft.AspNetCore.Mvc;
+using tdlimoveis.Models;
+using tdlimoveis.Services;
+
+namespace tdlimoveis.Controllers
+{
+  [ApiController]
+  [Route("[controller]")]
+  public class PropertyController : ControllerBase
+  {
+
+    private readonly IPropertyService _propertyService;
+
+    public PropertyController(IPropertyService propertyService)
+    {
+      _propertyService = propertyService;
+    }
+
+    [HttpPost("{ownerId}/properties")]
+    public async Task<IActionResult> CreateProperty(int ownerId, [FromBody] Property property)
+    {
+      var result = await _propertyService.CreatePropertyAsync(ownerId, property);
+
+      if (!result.Result)
+        return BadRequest(result.Message);
+
+      return Ok(result.Data);
+    }
+
+    [HttpGet("{ownerId}/properties")]
+    public async Task<IActionResult> ListProperties(int ownerId)
+    {
+      var result = await _propertyService.GetPropertiesByOwnerIdAsync(ownerId);
+
+      if (!result.Result)
+        return BadRequest(result.Message);
+
+      return Ok(result.Data);
+    }
+  }
+}

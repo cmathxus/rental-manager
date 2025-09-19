@@ -2,6 +2,7 @@ using tdlimoveis.Services;
 using tdlimoveis.Models;
 using tdlimoveis.Repository;
 using System.Data.Common;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace tdlimoveis.Services
 {
@@ -24,11 +25,11 @@ namespace tdlimoveis.Services
       return ServiceResult<Owner>.Success(owner);
     }
 
-    public async Task<ServiceResult<List<Owner>>> ReadAsync()
+    public async Task<ServiceResult<List<Owner>>> GetAllAsync()
     {
       try
       {
-        var owners = await _repository.ReadAsync();
+        var owners = await _repository.GetAllAsync();
 
         return ServiceResult<List<Owner>>.Success(owners);
       }
@@ -67,6 +68,25 @@ namespace tdlimoveis.Services
       catch (Exception ex)
       {
         return ServiceResult<Owner>.Fail($"Erro ao buscar proprietários: {ex.Message}");
+      }
+    }
+
+    public async Task<ServiceResult<Owner>> RemoveAsync(int id)
+    {
+      try
+      {
+        if (id == null)
+          return ServiceResult<Owner>.Fail($"Id ou nome não podem ser nulos!");
+
+        var owner = await _repository.GetOwnerByIdAsync(id);
+
+        await _repository.RemoveAsync(owner);
+
+        return ServiceResult<Owner>.Success(owner);
+      }
+      catch (Exception ex)
+      {
+        return ServiceResult<Owner>.Fail($"Erro ao remover proprietário: {ex.Message}");
       }
     }
   }

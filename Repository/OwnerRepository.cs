@@ -19,9 +19,11 @@ namespace tdlimoveis.Repository
       await _context.SaveChangesAsync();
     }
 
-    public async Task<List<Owner>> ReadAsync()
+    public async Task<List<Owner>> GetAllAsync()
     {
-      return await _context.Owners.OrderBy(x => x.Name).ToListAsync();
+      return await _context.Owners
+      .OrderBy(x => x.Name)
+      .ToListAsync();
     }
 
     public async Task UpdateAsync(int id, Owner owner)
@@ -34,5 +36,11 @@ namespace tdlimoveis.Repository
     {
       return await _context.Owners.FirstOrDefaultAsync(x => x.Id == id);
     }
-  }
+
+    public async Task RemoveAsync(Owner owner)
+    {
+      _context.Owners.Remove(owner);
+      await _context.SaveChangesAsync();
+    }
+   }
 }
