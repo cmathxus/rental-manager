@@ -29,7 +29,7 @@ namespace tdlimoveis.Repository
 
     public async Task UpdateAsync(Owner owner)
     {
-      _context.Owners.Add(owner);
+      _context.Owners.Update(owner);
       await _context.SaveChangesAsync();
     }
 

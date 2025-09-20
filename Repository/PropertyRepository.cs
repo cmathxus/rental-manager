@@ -19,12 +19,24 @@ namespace tdlimoveis.Repository
       await _context.SaveChangesAsync();
     }
 
-    public async Task<List<Property>> GetPropertyByOwnerIdAsync(int? id)
+    public async Task<List<Property>> GetPropertyByOwnerIdAsync(int id)
     {
       return await _context.Properties
       .Include(p => p.Owner)
       .Where(x => x.OwnerId == id)
       .ToListAsync();
+    }
+
+    public async Task<Property> GetPropertyById(int id)
+    {
+      return await _context.Properties
+      .FindAsync(id);
+    }
+
+    public async Task UpdateAsync(Property property)
+    {
+      _context.Properties.Update(property);
+      await _context.SaveChangesAsync();
     }
 
     public async Task RemoveAsync(Property property)

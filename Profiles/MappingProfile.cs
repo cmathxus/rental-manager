@@ -8,8 +8,9 @@ public class MappingProfile : Profile
   {
     CreateMap<Owner, OwnerReadDto>();
     CreateMap<OwnerCreateDto, Owner>();
-    
+
     CreateMap<Property, PropertyReadDto>();
     CreateMap<PropertyCreateDto, Property>();
+    CreateMap<PropertyUpdateDto, Property>();
   }
 }
