@@ -1,0 +1,17 @@
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\bin\Debug\net9.0\TdlImoveis.Infrastructure.deps.json
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\bin\Debug\net9.0\TdlImoveis.Infrastructure.runtimeconfig.json
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\bin\Debug\net9.0\TdlImoveis.Infrastructure.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\bin\Debug\net9.0\TdlImoveis.Infrastructure.pdb
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\bin\Debug\net9.0\TdlImoveis.Domain.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\bin\Debug\net9.0\TdlImoveis.Domain.pdb
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\TdlImoveis.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\TdlImoveis.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\TdlImoveis.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\TdlImoveis.Infrastructure.AssemblyInfo.cs
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\TdlImoveis.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\TdlImove.87DCED85.Up2Date
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\TdlImoveis.Infrastructure.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\refint\TdlImoveis.Infrastructure.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\TdlImoveis.Infrastructure.pdb
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\TdlImoveis.Infrastructure.genruntimeconfig.cache
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\ref\TdlImoveis.Infrastructure.dll

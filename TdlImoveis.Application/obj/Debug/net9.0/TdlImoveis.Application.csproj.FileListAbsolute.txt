@@ -1,0 +1,15 @@
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\bin\Debug\net9.0\TdlImoveis.Application.deps.json
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\bin\Debug\net9.0\TdlImoveis.Application.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\bin\Debug\net9.0\TdlImoveis.Application.pdb
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\bin\Debug\net9.0\TdlImoveis.Domain.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\bin\Debug\net9.0\TdlImoveis.Domain.pdb
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\TdlImoveis.Application.csproj.AssemblyReference.cache
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\TdlImoveis.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\TdlImoveis.Application.AssemblyInfoInputs.cache
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\TdlImoveis.Application.AssemblyInfo.cs
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\TdlImoveis.Application.csproj.CoreCompileInputs.cache
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\TdlImove.33FFBD6A.Up2Date
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\TdlImoveis.Application.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\refint\TdlImoveis.Application.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\TdlImoveis.Application.pdb
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\ref\TdlImoveis.Application.dll
