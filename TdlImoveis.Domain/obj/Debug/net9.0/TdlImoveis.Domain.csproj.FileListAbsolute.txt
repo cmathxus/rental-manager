@@ -9,3 +9,4 @@ C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\obj\Debug\net9.0\TdlImove
 C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\obj\Debug\net9.0\refint\TdlImoveis.Domain.dll
 C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\obj\Debug\net9.0\TdlImoveis.Domain.pdb
 C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\obj\Debug\net9.0\ref\TdlImoveis.Domain.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\obj\Debug\net9.0\TdlImoveis.Domain.sourcelink.json

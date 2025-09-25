@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\akirasz\\projects\\tdlimoveis\\TdlImoveis.API\\TdlImoveis.API.csproj": {}
+    "C:\\Users\\akirasz\\projects\\tdlimoveis\\tdlimoveis.api\\TdlImoveis.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\akirasz\\projects\\tdlimoveis\\TdlImoveis.API\\TdlImoveis.API.csproj": {
+    "C:\\Users\\akirasz\\projects\\tdlimoveis\\tdlimoveis.api\\TdlImoveis.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\akirasz\\projects\\tdlimoveis\\TdlImoveis.API\\TdlImoveis.API.csproj",
+        "projectUniqueName": "C:\\Users\\akirasz\\projects\\tdlimoveis\\tdlimoveis.api\\TdlImoveis.API.csproj",
         "projectName": "TdlImoveis.API",
-        "projectPath": "C:\\Users\\akirasz\\projects\\tdlimoveis\\TdlImoveis.API\\TdlImoveis.API.csproj",
+        "projectPath": "C:\\Users\\akirasz\\projects\\tdlimoveis\\tdlimoveis.api\\TdlImoveis.API.csproj",
         "packagesPath": "C:\\Users\\akirasz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\akirasz\\projects\\tdlimoveis\\TdlImoveis.API\\obj\\",
+        "outputPath": "C:\\Users\\akirasz\\projects\\tdlimoveis\\tdlimoveis.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\akirasz\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -58,9 +58,27 @@
               "target": "Package",
               "version": "[9.0.3, )"
             },
+            "Microsoft.EntityframeworkCore": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Microsoft.EntityframeworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "automapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
             }
           },
           "imports": [
@@ -132,7 +150,7 @@
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[15.0.1, )"
+              "version": "[12.0.1, )"
             },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",

@@ -4,7 +4,6 @@ using tdlimoveis.Domain.Entities;
 
 namespace TdlImoveis.Application.Mappings
 {
-
   public class MappingProfile : Profile
   {
     public MappingProfile()

@@ -6,7 +6,7 @@ namespace tdlimoveis.Domain.Entities
   {
     public string Name { get; set; }
     public string Email { get; set; }
-    public DocumentNumber DocumentNumber { get; set; }
+    public string DocumentNumber { get; set; }
     public string Phone { get; set; }
   }
 }

@@ -6,6 +6,5 @@ namespace tdlimoveis.Domain.Entities
     public DateOnly DataDeNascimento { get; set; }
     public int ContractId { get; set; }
     public Contract Contract { get; set; }
-    public List<Contract> Contracts { get; set; } = new();
   }
 }

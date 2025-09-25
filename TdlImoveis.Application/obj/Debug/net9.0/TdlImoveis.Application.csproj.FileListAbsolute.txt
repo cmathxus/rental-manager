@@ -13,3 +13,4 @@ C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\Tdl
 C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\refint\TdlImoveis.Application.dll
 C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\TdlImoveis.Application.pdb
 C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\ref\TdlImoveis.Application.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Application\obj\Debug\net9.0\TdlImoveis.Application.sourcelink.json

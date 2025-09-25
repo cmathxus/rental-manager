@@ -15,3 +15,4 @@ C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\
 C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\TdlImoveis.Infrastructure.pdb
 C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\TdlImoveis.Infrastructure.genruntimeconfig.cache
 C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\ref\TdlImoveis.Infrastructure.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Infrastructure\obj\Debug\net9.0\TdlImoveis.Infrastructure.sourcelink.json
