@@ -60,6 +60,25 @@ namespace tdlimoveis.Application.UseCases
       }
     }
 
+    public async Task<ServiceResult<PropertyReadDto>> GetPropertyById(int id)
+    {
+      try
+      {
+        if (id <= 0)
+          return ServiceResult<PropertyReadDto>.Fail("O id do proprietário não pode ser nulo!");
+
+        var property = await _propertyRepository.GetPropertyById(id);
+
+        var propertyReadDto = _mapper.Map<PropertyReadDto>(property);
+
+        return ServiceResult<PropertyReadDto>.Success(propertyReadDto);
+      }
+      catch (Exception ex)
+      {
+        return ServiceResult<PropertyReadDto>.Fail($"Erro ao buscar imóveis de proprietário: {ex.Message}");
+      }
+    }
+
     public async Task<ServiceResult<PropertyReadDto>> UpdateAsync(int id, PropertyUpdateDto propertyUpdateDto)
     {
       try

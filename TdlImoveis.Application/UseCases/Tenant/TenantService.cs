@@ -16,7 +16,7 @@ namespace tdlimoveis.Application.UseCases
       _mapper = mapper;
     }
 
-    public async Task<ServiceResult<TenantReadDto>> AddAsync(int id, TenantCreateDto tenantCreateDto)
+    public async Task<ServiceResult<TenantReadDto>> AddAsync(TenantCreateDto tenantCreateDto)
     {
       try
       {
@@ -24,8 +24,6 @@ namespace tdlimoveis.Application.UseCases
           return ServiceResult<TenantReadDto>.Fail($"Inquilino informado inválido!");
 
         var tenant = _mapper.Map<Tenant>(tenantCreateDto);
-
-        tenant.ContractId = id;
 
         await _repository.AddAsync(tenant);
 
@@ -36,6 +34,25 @@ namespace tdlimoveis.Application.UseCases
       catch (Exception ex)
       {
         return ServiceResult<TenantReadDto>.Fail($"Falha ao criar o inquilino! {ex.Message}");
+      }
+    }
+
+    public async Task<ServiceResult<List<TenantReadDto>>> GetTenants()
+    {
+      try
+      {
+        var tenants = await _repository.GetTenants();
+
+        if (tenants == null)
+          return ServiceResult<List<TenantReadDto>>.Fail($"Não foi possivel carregar a lista de inquilinos!");
+
+        var tenantsReadDto = _mapper.Map<List<TenantReadDto>>(tenants);
+
+        return ServiceResult<List<TenantReadDto>>.Success(tenantsReadDto);
+      }
+      catch (Exception ex)
+      {
+        return ServiceResult<List<TenantReadDto>>.Fail($"Não foi possivel carregar a lista de inquilinos! {ex.Message}");
       }
     }
     public async Task<ServiceResult<TenantReadDto>> UpdateAsync(int id, TenantCreateDto tenantCreateDto)

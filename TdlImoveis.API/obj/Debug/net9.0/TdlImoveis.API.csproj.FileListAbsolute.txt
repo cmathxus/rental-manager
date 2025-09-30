@@ -141,3 +141,17 @@ C:\Users\akirasz\projects\tdlimoveis\tdlimoveis.api\bin\Debug\net9.0\ru\Microsof
 C:\Users\akirasz\projects\tdlimoveis\tdlimoveis.api\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\akirasz\projects\tdlimoveis\tdlimoveis.api\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\akirasz\projects\tdlimoveis\tdlimoveis.api\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.API\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.API\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.API\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.API\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.API\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.API\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.API\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.API\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.API\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.API\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.API\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

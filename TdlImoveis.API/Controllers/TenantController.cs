@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using tdlimoveis.Application.DTOs;
 using tdlimoveis.Application.UseCases;
@@ -15,10 +16,11 @@ namespace tdlimoveis.Controllers
       _service = service;
     }
 
-    [HttpPost("/{contractId}/tenants")]
-    public async Task<IActionResult> CreateTenant(int contractId, [FromBody] TenantCreateDto tenantCreateDto)
+    [Authorize]
+    [HttpPost("/tenants")]
+    public async Task<IActionResult> CreateTenant([FromBody] TenantCreateDto tenantCreateDto)
     {
-      var result = await _service.AddAsync(contractId, tenantCreateDto);
+      var result = await _service.AddAsync(tenantCreateDto);
 
       if (!result.Result)
         return BadRequest(result.Message);
@@ -26,6 +28,19 @@ namespace tdlimoveis.Controllers
       return Ok(result.Data);
     }
 
+    [Authorize]
+    [HttpGet("/tenants")]
+    public async Task<IActionResult> GetTenants()
+    {
+      var result = await _service.GetTenants();
+
+      if (!result.Result)
+        return BadRequest(result.Message);
+
+      return Ok(result.Data);
+    }
+
+    [Authorize]
     [HttpPut("/tenants/{tenantId}")]
     public async Task<IActionResult> UpdateTenant(int tenantId, [FromBody] TenantCreateDto tenantCreateDto)
     {
@@ -37,6 +52,7 @@ namespace tdlimoveis.Controllers
       return Ok(result.Data);
     }
 
+    [Authorize]
     [HttpDelete("/tenants/{tenantId}")]
     public async Task<IActionResult> RemoveTenant(int tenantId)
     {

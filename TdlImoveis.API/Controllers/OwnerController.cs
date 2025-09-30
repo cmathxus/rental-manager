@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using tdlimoveis.Application.DTOs;
 using tdlimoveis.Application.UseCases;
@@ -15,6 +16,7 @@ namespace tdlimoveis.Controllers
       _ownerService = ownerService;
     }
 
+    [Authorize]
     [HttpPost("/owners")]
     public async Task<IActionResult> CreateOwner([FromBody] OwnerCreateDto owner)
     {
@@ -26,6 +28,7 @@ namespace tdlimoveis.Controllers
       return Ok(result.Data);
     }
 
+    [Authorize]
     [HttpGet("/owners")]
     public async Task<IActionResult> ReadOwners()
     {
@@ -37,6 +40,7 @@ namespace tdlimoveis.Controllers
       return Ok(result.Data);
     }
 
+    [Authorize]
     [HttpPut("/owners/{id}")]
     public async Task<IActionResult> UpdateOwner(int id, [FromBody] OwnerCreateDto updatedOwner)
     {
@@ -48,7 +52,7 @@ namespace tdlimoveis.Controllers
       return Ok(result.Data);
     }
 
-
+    [Authorize]
     [HttpDelete("/owners/{id}")]
     public async Task<IActionResult> RemoveOwner(int id)
     {

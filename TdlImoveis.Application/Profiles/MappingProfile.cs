@@ -20,6 +20,9 @@ namespace TdlImoveis.Application.Mappings
 
       CreateMap<Tenant, TenantReadDto>();
       CreateMap<TenantCreateDto, Tenant>();
+
+      CreateMap<UserCreateDto, User>();
+      CreateMap<User, UserReadDto>();
     }
   }
 }

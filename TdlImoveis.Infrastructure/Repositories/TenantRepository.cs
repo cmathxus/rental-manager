@@ -18,6 +18,10 @@ namespace tdlimoveis.Infrastructure.Persistence.Repositories
       _context.Tenants.Add(tenant);
       await _context.SaveChangesAsync();
     }
+    public async Task<List<Tenant>> GetTenants()
+    {
+      return _context.Tenants.OrderBy(x => x.Name).ToList();
+    }
     public async Task<Tenant> GetTenantById(int id)
     {
       return await _context.Tenants.FindAsync(id);

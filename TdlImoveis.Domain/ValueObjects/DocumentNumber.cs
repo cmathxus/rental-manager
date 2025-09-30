@@ -6,7 +6,7 @@ namespace tdlimoveis.ValueObjects
 
     public DocumentNumber(string number)
     {
-      if (string.IsNullOrWhiteSpace(number))
+      if (string.IsNullOrWhiteSpace(number)  || number.Length < 11)
         throw new Exception("Documento inválido!");
 
       Number = number;

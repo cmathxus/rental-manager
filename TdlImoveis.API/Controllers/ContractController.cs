@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using tdlimoveis.Application.DTOs;
 using tdlimoveis.Application.UseCases;
@@ -15,6 +16,7 @@ namespace tdlimoveis.Controllers
       _service = service;
     }
 
+    [Authorize]
     [HttpPost("/{propertyId}/contracts")]
     public async Task<IActionResult> AddContract(int propertyId, [FromBody] ContractCreateDto contract)
     {
@@ -26,6 +28,7 @@ namespace tdlimoveis.Controllers
       return Ok(result.Data);
     }
 
+    [Authorize]
     [HttpGet("/{propertyId}/contracts")]
     public async Task<IActionResult> GetContracts(int propertyId)
     {
@@ -37,6 +40,7 @@ namespace tdlimoveis.Controllers
       return Ok(result.Data);
     }
 
+    [Authorize]
     [HttpPut("/contracts/{contractId}")]
     public async Task<IActionResult> UpdateContract(int contractId, [FromBody] ContractCreateDto contract)
     {
@@ -48,6 +52,7 @@ namespace tdlimoveis.Controllers
       return Ok(result.Data);
     }
 
+    [Authorize]
     [HttpDelete("/contracts/{contractId}")]
     public async Task<IActionResult> RemoveContract(int contractId)
     {

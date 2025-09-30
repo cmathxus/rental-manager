@@ -1,0 +1,12 @@
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\bin\Release\net9.0\TdlImoveis.Domain.deps.json
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\bin\Release\net9.0\TdlImoveis.Domain.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\bin\Release\net9.0\TdlImoveis.Domain.pdb
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\obj\Release\net9.0\TdlImoveis.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\obj\Release\net9.0\TdlImoveis.Domain.AssemblyInfoInputs.cache
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\obj\Release\net9.0\TdlImoveis.Domain.AssemblyInfo.cs
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\obj\Release\net9.0\TdlImoveis.Domain.csproj.CoreCompileInputs.cache
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\obj\Release\net9.0\TdlImoveis.Domain.sourcelink.json
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\obj\Release\net9.0\TdlImoveis.Domain.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\obj\Release\net9.0\refint\TdlImoveis.Domain.dll
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\obj\Release\net9.0\TdlImoveis.Domain.pdb
+C:\Users\akirasz\projects\tdlimoveis\TdlImoveis.Domain\obj\Release\net9.0\ref\TdlImoveis.Domain.dll

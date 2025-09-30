@@ -1,4 +1,5 @@
 using System;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using tdlimoveis.Application.DTOs;
 using tdlimoveis.Application.UseCases;
@@ -17,6 +18,7 @@ namespace tdlimoveis.Controllers
       _propertyService = propertyService;
     }
 
+    [Authorize]
     [HttpPost("/owners/{ownerId}/properties")]
     public async Task<IActionResult> CreateProperty(int ownerId, [FromBody] PropertyCreateDto property)
     {
@@ -28,6 +30,7 @@ namespace tdlimoveis.Controllers
       return Ok(result.Data);
     }
 
+    [Authorize]
     [HttpGet("/owners/{ownerId}/properties")]
     public async Task<IActionResult> ListProperties(int ownerId)
     {
@@ -39,6 +42,19 @@ namespace tdlimoveis.Controllers
       return Ok(result.Data);
     }
 
+    [Authorize]
+    [HttpGet("/properties/{propertyId}")]
+    public async Task<IActionResult> GetPropertyById(int propertyId)
+    {
+      var result = await _propertyService.GetPropertyById(propertyId);
+
+      if (!result.Result)
+        return BadRequest(result.Message);
+
+      return Ok(result.Data);
+    }
+
+    [Authorize]
     [HttpPut("/properties/{propertyId}")]
     public async Task<IActionResult> UpdateProperty(int propertyId, [FromBody] PropertyUpdateDto property)
     {
@@ -50,6 +66,7 @@ namespace tdlimoveis.Controllers
       return Ok(result.Data);
     }
 
+    [Authorize]
     [HttpDelete("/properties/{propertyId}")]
     public async Task<IActionResult> RemoveProperty(int propertyId)
     {
