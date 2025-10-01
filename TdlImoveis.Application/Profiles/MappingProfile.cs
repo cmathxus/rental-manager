@@ -32,6 +32,15 @@ namespace TdlImoveis.Application.Mappings
 
       CreateMap<UserCreateDto, User>();
       CreateMap<User, UserReadDto>();
+      
+      CreateMap<PostalCodeDto, PropertyReadDto>()
+        .ForMember(dest => dest.Address, opt => 
+          opt.MapFrom(src => $"{src.Logradouro}, {src.Bairro}"))
+        .ForMember(dest => dest.Type, opt => opt.Ignore())
+        .ForMember(dest => dest.RentalValue, opt => opt.Ignore())
+        .ForMember(dest => dest.InsuranceExpiry, opt => opt.Ignore())
+        .ForMember(dest => dest.Status, opt => opt.Ignore())
+        .ForMember(dest => dest.OwnerId, opt => opt.Ignore());
     }
   }
 }

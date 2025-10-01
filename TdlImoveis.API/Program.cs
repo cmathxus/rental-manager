@@ -11,6 +11,7 @@ using TdlImoveis.Application.Mappings;
 using TdlImoveis.Application.UseCases;
 using tdlimoveis.Domain.Entities;
 using Microsoft.OpenApi.Models;
+using TdlImoveis.Application.UseCases.PostalCode;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -61,6 +62,7 @@ builder.Services.AddScoped<IPropertyService, PropertyService>();
 builder.Services.AddScoped<IOwnerService, OwnerService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserPasswordService, UserPasswordService>();
+builder.Services.AddScoped<IPostalCodeService, PostalCodeService>();
 
 //Repositorios
 builder.Services.AddScoped<IOwnerRepository, OwnerRepository>();
@@ -70,6 +72,8 @@ builder.Services.AddScoped<ITenantRepository, TenantRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+
+builder.Services.AddHttpClient();
 
 // configuração da autenticação JWT
 builder.Services.AddAuthentication(options =>
