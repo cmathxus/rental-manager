@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using tdlimoveis.Infrastructure.Persistence;
@@ -11,9 +12,11 @@ using tdlimoveis.Infrastructure.Persistence;
 namespace TdlImoveis.Infrastructure.Migrations
 {
     [DbContext(typeof(TdlContext))]
-    partial class TdlContextModelSnapshot : ModelSnapshot
+    [Migration("20251001140316_AddDocumentNumberValueObject")]
+    partial class AddDocumentNumberValueObject
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

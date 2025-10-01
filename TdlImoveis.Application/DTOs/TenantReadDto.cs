@@ -1,3 +1,5 @@
+using tdlimoveis.ValueObjects;
+
 namespace tdlimoveis.Application.DTOs
 {
   public class TenantReadDto
